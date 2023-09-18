@@ -1,0 +1,30 @@
+html:
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="aula.js"></script>
+    <title>Fofura</title>
+</head>
+<body>
+    <p id="inha" >Laurinha  <strong>fofinha</strong>, Mariazinha <strong>fofinha</strong> Luizinha, Moniquinha <strong>fofinha</strong> Eduardinha</p>
+    <p>Lauro fofo, Mario fofo Luizo, Monico fofo Eduardo</p>
+</body>
+</html>
+
+javascript:
+$(document).ready(function(){
+/*
+    if(confirm("dseja salvar as informações?")){
+        alert("informação salva com sucesso");
+
+    } else {
+        alert("inserção cancelada");
+
+    }
+*/
+    variavel_qualquer = $("p").text();
+        alert(variavel_qualquer);
+        $("#inha").text("Laurona fofona Mariazona fofona Luizona Monicona fofona Eduardona");
+
+})
