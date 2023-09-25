@@ -1,0 +1,53 @@
+html:
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="aula.js"></script>
+    <title>Fofura</title>
+</head>
+<body>
+    <p id="inha" >Laurinha  <strong>fofinha</strong>, Mariazinha <strong>fofinha</strong> Luizinha, Moniquinha <strong>fofinha</strong> Eduardinha</p>
+    <p>Lauro fofo, Mario fofo Luizo, Monico fofo Eduardo</p>
+    <input type="text" id="laura">
+    <select id="uf">
+        <option vlaue="RS">Rio Grande do Sul</option>
+        <option vlaue="SP">São Paulo</option>
+    </select>
+    <input type="button" id="maria" value="Maria">
+</body>
+</html>
+
+javascript:
+$(document).ready(function(){
+    /*
+        if(confirm("dseja salvar as informações?")){
+            alert("informação salva com sucesso");
+    
+        } else {
+            alert("inserção cancelada");
+    
+        }
+        variavel_qualquer = $("p").text();
+            alert(variavel_qualquer); */
+            num = 10
+            $("#inha").text("Laurona fofona Mariazona fofona Luizona Monicona fofona Eduardona" + num);
+
+            //monitorar o evento de clique no botão Salvar (no caso "salvar" tá como "maria")
+            $("#maria").click(function(){
+                /*alert("monique");
+                valor = $("#laura").val();
+                uf= $("#uf").val();
+                if (uf == "RS"){
+                    mensagem="tu é do rs"
+                } else {
+                    mensagem="você é de sp"
+                }
+                alert(mensagem);*/
+                $("#uf").append("<option value='SC'>Santa Catarina</option>");
+
+            })
+
+           
+            
+    })
