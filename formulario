@@ -35,6 +35,15 @@ $(document).ready(function(){
     $("#salvar").click(function(){
         nome = $("#nome").val();
         datanasc = $("#datanasc").val();
-        $("#clientes tbody").append("<tr><td>"+nome+"</td><td>"+datanasc+"</td></tr>");
+        $("#clientes tbody").append("<tr><td>"+nome+"</td><td>"+datanasc+"</td><td>input type='button' class='excluir' value='Excluir'></td></tr>");
+    })
+
+    $("#excluir").click(function(){
+        $("#clientes tbody").empty(); /* apenas os conteudos internos foram excluidos*/
+    
+    })
+
+    $(".excluir").click(function(){
+        alert("Bom dia")
     })
 })
