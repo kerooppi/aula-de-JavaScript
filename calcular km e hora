@@ -53,18 +53,19 @@ $(document).ready(function(){
 
         tempo_total = tempo_total + tempo;
 
-        $("#trajetos tbody").append("<tr><td>"+de+"</td><td>"+para+"</td><td class = 'km'>"+km+"</td><td>"+velocidade+"</td><td class='tempo'>"+tempo.toFixed(2)+"</td><td><input type='button' value='Excluir' class='excluir'></td></tr>");  //append=acrescenta uma linha
+        $("#trajetos tbody").append("<tr><td>"+de+"</td><td>"+para+"</td><td=class 'km'>"+km+"<td>"+velocidade+"</td><td=class'tempo'>"+tempo.toFixed(2)+"</td><td><input type='button' value='Excluir' class='excluir'></td></tr>");  //append=acrescenta uma linha
         $("#km_total").text(km_total);
-        $("#tempo_total").text(tempo_total);
+        $("#tempo_total").text(tempo_total.toFixed(2));
+
+        funcaoDeExempoDoEach();
     })
 
     $("#trajetos tbody").on("click", ".excluir", function(){
         km = $(this).closest("tr").find(".km").text();
-        tempo = $(this).closest("tr").find(".tempo").text();
-        alert(km);
-
+        tempo = $(this).parent().prev().text();
+        
         km_total = km_total - km;
-        tempo_total = tempo_total - tempo; //fazer // dar nome de uma classe para as células
+        tempo_total = tempo_total - tempo; 
 
         $(this).closest("tr").remove();
         $("#km_total").text(km_total);
