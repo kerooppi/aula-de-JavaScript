@@ -1,0 +1,66 @@
+HTML !!!!!!!!!!!!!!!!!!!!!!!!!
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="aula.js"></script>
+</head>
+<body>
+    <table id="veiculos">
+        <thead>
+            <tr>
+                <th></th><th>modelo</th><th>ano</th><th>preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type = "checkbox" class="selecao"></td>
+                <td>Laura</td>
+                <td>2006</td>
+                <td>1000000000000000</td>
+            </tr>
+            <tr>
+                <td><input type = "checkbox" class="selecao"></td>
+                <td>Maria Luiza</td>
+                <td>2005</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type = "checkbox" class="selecao"></td>
+                <td>Monique</td>
+                <td>2006</td>
+                <td>-2</td>
+            </tr>
+            <tr>
+                <td><input type = "checkbox" class="selecao"></td>
+                <td>Eumppappa</td>
+                <td>2023</td>
+                <td>38047804804890489385976973447937</td>
+            </tr>
+            <tr>
+                <td><input type = "checkbox" class="selecao"></td>
+                <td>Ana Castela</td>
+                <td>2003</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" id="excluir-selec" value="Excluir Selecionados">
+</body>
+</html>
+
+JAVASCRIPT !!!!!!!!!!!!!!!!!!!!!
+
+$(document).ready(function(){
+    $("#excluir-selec").click(function(){
+        $(".selecao:checked").each(function(){
+            $(this).closest("tr").remove();
+        })
+    })                                                                          
+
+})
