@@ -1,5 +1,3 @@
-HTML !!!!!!!!!!!!!!!!!!!!!!!!!
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,42 +17,49 @@ HTML !!!!!!!!!!!!!!!!!!!!!!!!!
         </thead>
         <tbody>
             <tr>
-                <td><input type = "checkbox" class="selecao"></td>
+                <td><input type = "checkbox" class="roxo"></td>
                 <td>Laura</td>
                 <td>2006</td>
-                <td>1000000000000000</td>
+                <td>100</td>
             </tr>
             <tr>
-                <td><input type = "checkbox" class="selecao"></td>
+                <td><input type = "checkbox" class="branco"></td>
                 <td>Maria Luiza</td>
                 <td>2005</td>
-                <td>0</td>
+                <td>80</td>
             </tr>
             <tr>
-                <td><input type = "checkbox" class="selecao"></td>
+                <td><input type = "checkbox" class="verde"></td>
                 <td>Monique</td>
                 <td>2006</td>
-                <td>-2</td>
+                <td>200</td>
             </tr>
             <tr>
-                <td><input type = "checkbox" class="selecao"></td>
-                <td>Eumppappa</td>
+                <td><input type = "checkbox" class="VolksWagen"></td>
+                <td>Gol</td>
                 <td>2023</td>
-                <td>38047804804890489385976973447937</td>
+                <td>380</td>
             </tr>
             <tr>
-                <td><input type = "checkbox" class="selecao"></td>
-                <td>Ana Castela</td>
+                <td><input type = "checkbox" class="Fiat"></td>
+                <td>Uno</td>
                 <td>2003</td>
                 <td>10</td>
             </tr>
         </tbody>
     </table>
     <input type="button" id="excluir-selec" value="Excluir Selecionados">
+    <select id="marca">
+        <option>roxo</option>
+        <option>branco</option>
+        <option>verde</option>
+        <option>VolksWagen</option>
+        <option>Fiat</option>
+    </select>
 </body>
 </html>
 
-JAVASCRIPT !!!!!!!!!!!!!!!!!!!!!
+JavaScript    JavaScript    JavaScript    JavaScript    JavaScript    JavaScript    JavaScript    JavaScript
 
 $(document).ready(function(){
     $("#excluir-selec").click(function(){
@@ -63,4 +68,9 @@ $(document).ready(function(){
         })
     })                                                                          
 
+    $("#marca").change(function(){
+        marca=$(this).val();
+        $("#veiculos tbody tr").hide(500); //efeito hide
+        $("."+marca).closest("tr").show();
+    })
 })
