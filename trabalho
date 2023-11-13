@@ -95,7 +95,6 @@ $(document).ready(function(){
         
         } else {
 
-
         $("#veiculos tbody tr").hide(); //efeito hide
         $("."+marca).closest("tr").show();
         }
