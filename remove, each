@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" src="aula.js"></script>
+    <script type="text/javascript" src="ex1.js"></script>
 </head>
 <body>
     <table id="veiculos">
@@ -24,7 +24,7 @@
             </tr>
             <tr>
                 <td><input type = "checkbox" class="branco"></td>
-                <td>Maria Luiza</td>
+                <td>Maria</td>
                 <td>2005</td>
                 <td>80</td>
             </tr>
@@ -36,13 +36,13 @@
             </tr>
             <tr>
                 <td><input type = "checkbox" class="VolksWagen"></td>
-                <td>Gol</td>
+                <td>Isa</td>
                 <td>2023</td>
                 <td>380</td>
             </tr>
             <tr>
                 <td><input type = "checkbox" class="Fiat"></td>
-                <td>Uno</td>
+                <td>A</td>
                 <td>2003</td>
                 <td>10</td>
             </tr>
@@ -50,12 +50,14 @@
     </table>
     <input type="button" id="excluir-selec" value="Excluir Selecionados">
     <select id="marca">
+        <option>todos</option>
         <option>roxo</option>
         <option>branco</option>
         <option>verde</option>
         <option>VolksWagen</option>
         <option>Fiat</option>
     </select>
+    <input type="file" id="arquivo" accept="image/png, image/jpeg">
 </body>
 </html>
 
@@ -72,5 +74,30 @@ $(document).ready(function(){
         marca=$(this).val();
         $("#veiculos tbody tr").hide(500); //efeito hide
         $("."+marca).closest("tr").show();
+    })
+})
+
+JAVASCRIPT
+
+$(document).ready(function(){
+    $("#excluir-selec").click(function(){
+        alert($("#arquivo").val().replace("C:\\fakepath\\", ''));
+        $(".selecao:checked").each(function(){
+            $(this).closest("tr").remove();
+        })
+    })                                                                          
+
+    $("#marca").change(function(){
+        marca=$(this).val();
+
+        if(marca == "todos"){
+            $("#veiculos tbody tr").show();
+        
+        } else {
+
+
+        $("#veiculos tbody tr").hide(); //efeito hide
+        $("."+marca).closest("tr").show();
+        }
     })
 })
