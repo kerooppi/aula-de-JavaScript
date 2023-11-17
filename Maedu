@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="png"
+        href="https://imagensemoldes.com.br/wp-content/uploads/2021/01/Desenho-de-Gato-Arte-Almofadas-Pet-1024x1024.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="atv.js"></script>
+    <title>Site Maedu</title>
+</head>
+<body>
+    <div id="container">
+        <form action="" method="">
+            <label for="NP">Nome do Produto: </label>
+            <input type="text" id="NP">
+            <label for="IMG">Imagem do Produto: </label>
+            <input type="file" id="arquivo" accept="image/png, image/jpeg">
+            <label for="PP">Preço do Produto: R$</label>
+            <input type="text" id="PP">
+
+            <label for="CT">Categoria do Produto: </label>
+            <select id="CT">
+                <option>todos</option>
+                <option>roxo</option>
+                <option>branco</option>
+                <option>verde</option>
+                <option>azul</option>
+                <option>vermelho</option>
+            </select>
+            <input type="button" id="adicionar" value="Adicionar Produto">
+            <input type="button" id="excluir-selec" value="Excluir Selecionados">
+        </form>
+
+
+</body>
+</html>
