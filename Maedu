@@ -12,21 +12,21 @@
 <body>
     <div id="container">
         <form action="" method="">
-            <label for="NP">Nome do Produto: </label>
+            <label for="NP">Nome do filme: </label>
             <input type="text" id="NP">
-            <label for="IMG">Imagem do Produto: </label>
+            <label for="IMG">Imagem do catalógo: </label>
             <input type="file" id="arquivo" accept="image/png, image/jpeg">
-            <label for="PP">Preço do Produto: R$</label>
+            <label for="PP">Preço ingresso: R$</label>
             <input type="text" id="PP">
 
-            <label for="CT">Categoria do Produto: </label>
-            <select id="CT">
-                <option>todos</option>
-                <option>roxo</option>
-                <option>branco</option>
-                <option>verde</option>
-                <option>azul</option>
-                <option>vermelho</option>
+            <label for="Genero">genero: </label>
+            <select id="Genero">
+                <option>Ação</option>
+                <option>Animação</option>
+                <option>Terror</option>
+                <option>Drama</option>
+                <option>Comédia</option>
+                <option>Romance</option>
             </select>
             <input type="button" id="adicionar" value="Adicionar Produto">
             <input type="button" id="excluir-selec" value="Excluir Selecionados">
