@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="sylvanian.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="sylvanian.js"></script>
+    <title> sylvanian families ♡ </title>
+</head>
+<body>
+    <div class="busca">
+        <input type="text" placeholder="Procurando uma coleção?">
+        <ul id="produtos">
+            <li>Limitados</li>
+            <li>Baby Collectibles</li>
+            <li>Pony Salon Series</li>
+            <li>Town series</li>
+            <li>Edição Especial</li>
+        </ul>
+            <label for="catalogo">Catálogo:</label>
+            <select class="catalogo">
+                <option>Famílias</option>
+                <option>Bebês</option>
+                <option>Balé</option>
+                <option>Casas</option>
+                <option>Veículos</option>
+            <input type="submit" name="selecionar" id="selecionar" value="Selecionar">
+            </select>
+             
+        </form>
+    </div>
+    <div id="familia">
+    <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2356_1659686016973.jpg">
+    <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2387_1671682214280.jpg">
+    <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/1995_1595922961537.jpg">
+    </div>
+    <footer>
+    <h1>Sylvanian Families</h1>
+    <p>Desde 1985, Sylvanian Families tem sido uma linha amada por muitas pessoas ao redor do mundo. São brinquedos nostálgicos que atraem pessoas de várias faixas etárias. Baseada em três conceitos: natureza, família e amor, as crianças podem explorar o poder da imaginação e aprender a cuidar e compartilhar com o outro.
+        Sylvanian Families está sempre lá para ajudar as crianças a adquirirem habilidades sociais fundamentais.</p>
+    </footer>
+    </body>
+</html>
+
+css
+
+h1{
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: rgb(150, 150, 150);
+}
+.busca{
+    display: block;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(226, 233, 255);
+    align-items: center;
+    justify-content: center;
+}
+.busca input {
+    width: 80%;
+    height: 30px;
+    padding-left: 10px;
+    margin:15px;
+    font-size: 17px;
+    border: 1px solid;
+    border-color: rgb(206, 206, 206);
+    border-radius: 7px;
+}
+li {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+li a:hover{
+    background-color: rgb(212, 220, 255);
+}
+.catalogo{
+    width: 30%;
+    height: 30px;
+    margin: 10px;
+    background-color: #f6f7ff;
+}
+#selecionar{
+    width: 15%;
+    height: 22px;
+    font-size: 12px;
+    border-color: rgb(133, 133, 133);
+    background-color: rgb(226, 233, 255);
+
+}
+label{
+    font-size: 25px;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+#produtos{
+    list-style-type: none;
+}
+#familia{
+    margin: 20px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-items: center;
+}
+#familia, img{
+    width: 50%;
+}
+footer{
+    position:static;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
