@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="png"
+        href="https://imagensemoldes.com.br/wp-content/uploads/2021/01/Desenho-de-Gato-Arte-Almofadas-Pet-1024x1024.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="atv.js"></script>
+    <link rel="stylesheet" type="text/css" href="atv.css">
+    <title>Site Maedu</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #container {
+            text-align: center;
+        }
+
+        form {
+            text-align: left;
+            width: 300px; /* Define a largura máxima do formulário */
+            margin: auto; /* Centraliza o formulário na página */
+            padding: 20px; /* Adiciona espaço interno ao formulário */
+            border: 2px solid red; /* Adiciona uma borda vermelha ao redor do formulário */
+            border-radius: 10px; /* Adiciona bordas arredondadas à borda do formulário */
+        }
+
+        form label, form input, form select {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #adicionar {
+            background-color: #4CAF50; /* Cor de fundo verde */
+            color: white; /* Cor do texto branco */
+            padding: 10px 15px; /* Adiciona espaço interno ao botão */
+            font-size: 16px; /* Tamanho da fonte */
+            border: none; /* Remove a borda padrão */
+            border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+            cursor: pointer;
+        }
+
+        #adicionar:hover {
+            background-color: #45a049; /* Cor de fundo verde mais escura ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <header id="cabeçalho">
+        <div class="titulo"></div>
+    </header>
+
+    <div id="container">
+        <h1>FILMES</h1>
+        <h2>Adicionar Novo Filme</h2>
+        <form action="" method="">
+            <label for="NP">Nome do filme: </label>
+            <input type="text" id="NP">
+
+            <label for="IMG">Imagem do catálogo: </label>
+            <input type="file" id="arquivo" accept="image/png, image/jpeg">
+
+            <label for="PP">Preço do ingresso: R$</label>
+            <input type="text" id="PP">
+
+            <label for="Genero">Gênero: </label>
+            <select id="Genero">
+                <option>Ação</option>
+                <option>Animação</option>
+                <option>Terror</option>
+                <option>Drama</option>
+                <option>Comédia</option>
+                <option>Romance</option>
+            </select>
+            
+            <input type="button" id="adicionar" value="Adicionar filme">
+        </form>
+    </div>
+</body>
+</html>
