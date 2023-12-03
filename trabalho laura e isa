@@ -15,7 +15,6 @@
         <option value="familias">Famílias</option>
         <option value="bebes">Bebês</option>
         <option value="casas">Casas</option>
-        <option value="veiculos">Veículos</option>
     </select>
 
     <button id="selecionar">Selecionar</button>
@@ -38,8 +37,23 @@
               <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2070_1610415702769.jpg" alt="patinhos" style="width: 50px;">
               <span>Carrinho de bebê dos patinhos.</span>
           </li>
+          <li data-id="categoria" class="bebes">
+            <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/1738_1527491871210.jpg" alt="rato" style="width: 50px;">
+            <span>Bebê Rato Marshmallow.</span>
+          </li>
+          <li data-id="categoria" class="bebes">
+            <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2077_1610417838620.jpg" alt="fantasias" style="width: 50px;">
+            <span>Adoráveis Fantasias (Coelhinho e Cachorrinho).</span>
+          </li>
+          <li data-id="categoria" class="casas">
+            <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2355_1659685801491.jpg" alt="casa" style="width: 50px;">
+            <span>Primeira Casa Sylvanian Families.</span>
+          </li>
+          <li data-id="categoria" class="casas">
+            <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2253_1627288194941.jpg" alt="gift" style="width: 50px;">
+            <span>Courtyard Home Gift Set</span>
+          </li>
         </ul>
     </div>
-
 </body>
 </html>
