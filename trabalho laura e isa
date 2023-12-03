@@ -3,38 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <title>sylvanian families ♡</title>
     <link rel="stylesheet" type="text/css" href="sylvanian.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="sylvanian.js"></script>
-    <title> sylvanian families ♡ </title>
 </head>
 <body>
-    <div class="busca">
-        <input type="text" placeholder="Procurando uma coleção?">
-        <ul id="produtos">
-            <li>Limitados</li>
-            <li>Baby Collectibles</li>
-            <li>Pony Salon Series</li>
-            <li>Town series</li>
-            <li>Edição Especial</li>
-        </ul>
-            <label for="catalogo">Catálogo:</label>
-            <select class="catalogo">
-                <option>Famílias</option>
-                <option>Bebês</option>
-                <option>Balé</option>
-                <option>Casas</option>
-                <option>Veículos</option>
-            <input type="submit" name="selecionar" id="selecionar" value="Selecionar">
-            </select>
-             
-        </form>
-    </div>
-    <div id="familia">
-    <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2356_1659686016973.jpg">
-    <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2387_1671682214280.jpg">
-    <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/1995_1595922961537.jpg">
+    <h1>Catálogo:</h1>
+    <label for="categria">Categorias:</label>
+    <select id="categoria">
+        <option value="familias">Famílias</option>
+        <option value="bebes">Bebês</option>
+        <option value="casas">Casas</option>
+        <option value="veiculos">Veículos</option>
+    </select>
+
+    <button id="selecionar">Selecionar</button>
+
+    <div id="listaprodutos">
+        <!-- Product list will be displayed here -->
     </div>
     <footer>
     <h1>Sylvanian Families</h1>
