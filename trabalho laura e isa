@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>Catálogo:</h1>
-    <label for="categria">Categorias:</label>
+    <label for="categoria">Categorias:</label>
     <select id="categoria">
         <option value="familias">Famílias</option>
         <option value="bebes">Bebês</option>
@@ -21,14 +21,27 @@
     <button id="selecionar">Selecionar</button>
 
     <div id="listaprodutos">
-        <!-- Product list will be displayed here -->
+        <ul>
+            <li data-id="categoria" class="familias">
+                <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2356_1659686016973.jpg" alt="coelhos" style="width: 50px;">
+                <span>Família de coelhos.</span>
+            </li>
+            <li data-id="categoria" class="familias">
+                <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2290_1639384098638.jpg" alt="ovelhas" style="width: 50px;">
+                <span>Família de ovelhas.</span>
+            </li>
+            <li data-id="categoria" class="familias">
+                <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/1989_1595920595136.jpg" alt="gatos" style="width: 50px;">
+                <span>Família de gatos.</span>
+            </li>
+            <li data-id="categoria" class="bebes">
+              <img src="https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2070_1610415702769.jpg" alt="patinhos" style="width: 50px;">
+              <span>Carrinho de bebê dos patinhos.</span>
+          </li>
+        </ul>
     </div>
-    <footer>
-    <h1>Sylvanian Families</h1>
-    <p>Desde 1985, Sylvanian Families tem sido uma linha amada por muitas pessoas ao redor do mundo. São brinquedos nostálgicos que atraem pessoas de várias faixas etárias. Baseada em três conceitos: natureza, família e amor, as crianças podem explorar o poder da imaginação e aprender a cuidar e compartilhar com o outro.
-        Sylvanian Families está sempre lá para ajudar as crianças a adquirirem habilidades sociais fundamentais.</p>
-    </footer>
-    </body>
+
+</body>
 </html>
 
 css
