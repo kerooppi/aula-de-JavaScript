@@ -12,6 +12,7 @@
     <h1>Catálogo:</h1>
     <label for="categoria">Categorias:</label>
     <select id="categoria">
+        <option value="todos">Todos</option>
         <option value="familias">Famílias</option>
         <option value="bebes">Bebês</option>
         <option value="casas">Casas</option>
@@ -55,5 +56,135 @@
           </li>
         </ul>
     </div>
+
 </body>
 </html>
+
+css
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec; /* Light pink background */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #e44d26; /* Coral pink */
+}
+
+label {
+    margin-right: 10px;
+}
+
+#listaprodutos {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #f8bbd0; /* Pastel pink border */
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px; /* Rounded corners */
+}
+
+li img {
+    margin-right: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+li span {
+    flex-grow: 1;
+    color: #555; /* Dark gray text */
+}
+
+
+javascript
+
+
+// Sample product data with images
+const products = [
+  { id: 'familias', name: 'Família de coelhos.', image: 'https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2356_1659686016973.jpg' },
+  { id: 'familias', name: 'Família de ovelhas.', image: 'https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2290_1639384098638.jpg' },
+  { id: 'familias', name: 'Família de gatos.', image: 'https://www.sylvanianfamilies.com/assets/includes_gl/img/products/1989_1595920595136.jpg' },
+  { id: 'bebes', name: 'Carrinho de bebê dos patinhos.', image: 'https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2070_1610415702769.jpg' },
+  { id: 'bebes', name: 'Bebê Rato Marshmallow.', image: 'https://www.sylvanianfamilies.com/assets/includes_gl/img/products/1738_1527491871210.jpg' },
+  { id: 'bebes', name: 'Adoráveis Fantasias (Coelhinho e Cachorrinho).', image: 'https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2077_1610417838620.jpg' },
+  { id: 'casas', name: 'Primeira Casa Sylvanian Families.', image: 'https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2355_1659685801491.jpg' },
+  { id: 'casas', name: 'Courtyard Home Gift Set', image: 'https://www.sylvanianfamilies.com/assets/includes_gl/img/products/2253_1627288194941.jpg' },
+  // Add more products as needed
+];
+
+// Function to filter products based on selected category
+function filterProducts() {
+  const selectedCategory = $('#categoria').val();
+
+  // Filter products based on the selected category
+  const filteredProducts = selectedCategory === 'todos'
+      ? products
+      : products.filter(product => product.id === selectedCategory);
+
+  // Display the filtered products
+  displayProducts(filteredProducts);
+}
+
+// Function to display products in the product list
+function displayProducts(products) {
+  const productListContainer = $('#listaprodutos ul');
+  productListContainer.empty(); // Clear previous content
+
+  if (products.length === 0) {
+      productListContainer.html('<p>Nenhum produto encontrado.</p>');
+  } else {
+      // Create a list of products
+      const productList = $('<ul></ul>');
+      products.forEach(product => {
+          const listItem = $('<li></li>').addClass(product.id);
+
+          // Create an image element
+          const productImage = $('<img>')
+              .attr('src', product.image)
+              .attr('alt', product.name)
+              .css('width', '50px'); // Adjust the size as needed
+          listItem.append(productImage);
+
+          // Create a span element for product name
+          const productName = $('<span></span>').text(product.name);
+          listItem.append(productName);
+
+          productList.append(listItem);
+      });
+
+      productListContainer.append(productList);
+  }
+}
+
+// Function to select all products
+function selectAllProducts() {
+  // Set all products as selected
+  $.each(products, (index, product) => {
+      product.selected = true;
+  });
+
+  // Display all products
+  displayProducts(products);
+}
+
+// Initial display of all products
+$(document).ready(function () {
+  displayProducts(products);
+
+  // Attach event handlers
+  $('#categoria').on('change', filterProducts);
+  $('#selecionar').on('click', selectAllProducts);
+});
