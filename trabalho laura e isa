@@ -7,9 +7,13 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Catálogo:</h1>
+    <div id="menu">
+    <h1>Sylvanian Families:</h1>
     <label for="categoria">Categorias:</label>
     <select id="categoria">
         <option value="todos">Todos</option>
@@ -17,8 +21,8 @@
         <option value="bebes">Bebês</option>
         <option value="casas">Casas</option>
     </select>
-
     <button id="voltar">Voltar ao início</button>
+    </div>
 
     <div id="listaprodutos">
         <ul>
@@ -81,74 +85,47 @@
           </li>
         </ul>
     </div>
+    <footer>
+        <h1>O que é Sylvanian Families?</h1>
+        <p>Desde 1985, Sylvanian Families tem sido uma linha amada por muitas pessoas ao redor do mundo. São brinquedos nostálgicos que atraem pessoas de várias faixas etárias. Baseada em três conceitos: natureza, família e amor, as crianças podem explorar o poder da imaginação e aprender a cuidar e compartilhar com o outro.
+            Sylvanian Families está sempre lá para ajudar as crianças a adquirirem habilidades sociais fundamentais.</p>
+    </footer>
 
 </body>
 </html>
+
 
 css
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fce4ec;
     margin: 0;
     padding: 0;
 }
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 25px;
+    background-color: #fce4ec;
+}
 
 h1 {
+    font-family: 'Mochiy Pop One', sans-serif;
     text-align: center;
     color: #e42646;
+    font-size: 38px;
+}
+#categoria{
+    width: 50%;
+    height:30px;
+    background-color: #fff7fa;
+    border-radius: 10px;
 }
 
 label {
-    margin-right: 10px;
-}
-
-img {
-    width: 200px;
-}
-
-#listaprodutos {
-    margin-top: 20px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-li {
-    background-color: #fff;
-    border: 1px solid #f8bbd0;
-    margin: 10px;
-    padding: 15px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-radius: 8px;
-}
-
-li img {
-    height: 190px;
-    margin-bottom: 10px;
-    border-radius: 20%;
-}
-
-li span {
-    color: #555;
-}
-
-
-.preco {
-    margin-top: 10px;
-    color: #e42646;
     font-weight: bold;
-    display: block;
-}
-
 
 javascript
 
