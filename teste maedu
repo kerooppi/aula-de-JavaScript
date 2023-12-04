@@ -85,3 +85,29 @@
     </div>
 </body>
 </html>
+
+$(document).ready(function(){
+
+    $("#adicionar").click(function(){
+    var NomeFilme = $("#NomeFilme").val();
+    var PrecoIngresso = $("#PrecoIngresso").val();
+    //var Imagem = $("#Imagem")[0].files[0];
+    var Genero = $("#Genero").val();
+ 
+    var NovoFilme = $("<div class='container "+Genero+"'>");
+        //var reader = new FileReader();
+        //reader.onload = function(e) {
+        //    NovoFilme.append("<img class='imagem' src='"+e.target.result + "'alt ='imagem'>");
+        //};
+        
+    NovoFilme.append("<p>" + NomeFilme + "</p>");
+    NovoFilme.append("<p> R$" + PrecoIngresso + "</p>");
+    NovoFilme.append("<input type='button' class='excluir' value='Excluir'>");
+    $("#colecaofilmes").append(NovoFilme);
+    })
+    
+    $("#colecaofilmes").on("click", ".excluir", function(){
+        $(this).closest("div").remove();
+    });
+})
+
